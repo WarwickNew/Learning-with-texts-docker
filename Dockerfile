@@ -14,18 +14,17 @@ RUN service mariadb start && sleep 5 && mysqladmin -u root password 'abcxyz' && 
 
 # Configure LWT
 RUN rm /var/www/html/index.html
-WORKDIR /var/www/html/lwt
+WORKDIR /var/www/html/
 COPY lwt_v_2_0_2.zip .
 RUN unzip lwt_v_2_0_2.zip && rm lwt_v_2_0_2.zip
 
-RUN ls
 RUN mv connect_xampp.inc.php connect.inc.php
 RUN sed -i 's/$passwd = "";/$passwd = "abcxyz";/g' connect.inc.php
 
-RUN chmod -R 755 /var/www/html/lwt
+RUN chmod -R 755 /var/www/html
 
 # Clean up
-RUN DEBIAN_FRONTEND=noninteractive apt-get purge --autoremove unzip -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get purge --autoremove unzip default-mysql-client -y
 
 WORKDIR /root
 COPY run.sh .

@@ -20,7 +20,7 @@ Then we need to build the image.
 # docker build -t $(whoami)/learning-with-texts .
 ```
 
-Then you can deploy the image any time byt running the command in deploy.sh, and access the site at `http://localhost/lwt/` Feel free to adapt the command to change the port number if your deploying this image on your own server or something.
+Then you can deploy the image any time byt running the command in deploy.sh, and access the site at `http://localhost/` Feel free to adapt the command to change the port number if your deploying this image on your own server or something.
 
 You can stop the server by running:
 ```bash
