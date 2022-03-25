@@ -2,7 +2,8 @@
 ## Building
 Fist make sure you have docker installed and available in PATH for your os.
 
-Then we need to download and unzip learning with texts, this simple deployment script works with version 2.0.2. The directory should look like this once your done.
+Then we need to download and unzip learning with texts, this simple deployment
+script works with version 2.0.2. The directory should look like this once you're done.
 
 `Dockerfile LICENSE LWT_INSTALLATION.txt README.md README.txt deploy.sh lwt_v_2_0_2.zip run.sh`
 
@@ -20,7 +21,9 @@ Then we need to build the image.
 # docker build -t $(whoami)/learning-with-texts .
 ```
 
-Then you can deploy the image any time byt running the command in deploy.sh, and access the site at `http://localhost/` Feel free to adapt the command to change the port number if your deploying this image on your own server or something.
+Then you can deploy the image any time byt running the command in deploy.sh, and
+access the site at `http://localhost/` Feel free to adapt the command to change
+the port number if you're deploying this image on your own server or something.
 
 You can stop the server by running:
 ```bash
